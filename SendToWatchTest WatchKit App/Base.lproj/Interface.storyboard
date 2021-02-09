@@ -11,14 +11,20 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SendToWatchTest_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Message..." id="oi2-rh-99Y"/>
+                        <imageView height="71" alignment="left" image="Main Icon Watch" contentMode="scaleAspectFit" id="up9-zB-LTC"/>
+                        <separator alignment="left" id="9DH-QM-Ug8">
+                            <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <label alignment="left" text="Message..." numberOfLines="0" id="oi2-rh-99Y">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="messageLabel" destination="oi2-rh-99Y" id="Pm8-CU-P96"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="219.52173913043478" y="319.50892857142856"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -52,4 +58,7 @@
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Main Icon Watch" width="2240" height="2902"/>
+    </resources>
 </document>

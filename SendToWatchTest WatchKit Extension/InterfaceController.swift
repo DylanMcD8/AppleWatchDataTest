@@ -24,11 +24,12 @@ class InterfaceController: WKInterfaceController {
 //            session.delegate = self
 //            session.activate()
 //        }
+        messageLabel.setText("Last message received: \(UserDefaults.standard.object(forKey: "ScheduleDays") ?? "No message")")
         NotificationCenter.default.addObserver(self, selector: #selector(MessageReceived), name: NSNotification.Name(rawValue: "MessageReceived"), object: nil)
     }
     
     @objc func MessageReceived(_ notification: Notification) {
-        messageLabel.setText(UserDefaults.standard.string(forKey: "ScheduleDays"))
+        messageLabel.setText("\(UserDefaults.standard.object(forKey: "ScheduleDays") ?? "No message")")
         WKInterfaceDevice().play(.click)
     }
 
