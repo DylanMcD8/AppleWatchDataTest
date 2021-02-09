@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Communicator",
+        "repositoryURL": "https://github.com/KaneCheshire/Communicator",
+        "state": {
+          "branch": null,
+          "revision": "3d2b6c9f07902de7e87a5e9af2cff280de7981c9",
+          "version": "4.1.0"
+        }
+      },
+      {
+        "package": "SPAlert",
+        "repositoryURL": "https://github.com/ivanvorobei/SPAlert",
+        "state": {
+          "branch": null,
+          "revision": "0c28dc4aa42c4f2c1cef7ad892d5d6ecbb30ebd2",
+          "version": "3.0.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
