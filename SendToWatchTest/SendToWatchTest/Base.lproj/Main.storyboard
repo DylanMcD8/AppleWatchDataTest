@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18121" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18091"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--→ Watch -->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SendToWatchTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Main Icon" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lmG-10-bMx">
+                                <rect key="frame" x="0.0" y="44" width="428" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="4wM-tx-8Pp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="→ Watch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6f-ES-U3W">
+                                <rect key="frame" x="16" y="190" width="396" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aqy-Tm-6vT">
+                                <rect key="frame" x="20" y="265" width="388" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter text..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RS4-Ih-viD">
+                                        <rect key="frame" x="16" y="16" width="356" height="28"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="RS4-Ih-viD" secondAttribute="trailing" constant="16" id="0Sh-6F-b35"/>
+                                    <constraint firstAttribute="bottom" secondItem="RS4-Ih-viD" secondAttribute="bottom" constant="16" id="D1Y-EX-NQT"/>
+                                    <constraint firstItem="RS4-Ih-viD" firstAttribute="leading" secondItem="Aqy-Tm-6vT" secondAttribute="leading" constant="16" id="OLu-2s-ejh"/>
+                                    <constraint firstItem="RS4-Ih-viD" firstAttribute="top" secondItem="Aqy-Tm-6vT" secondAttribute="top" constant="16" id="hpp-Gc-xaC"/>
+                                    <constraint firstAttribute="height" constant="60" id="smy-SZ-2hn"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vu7-cQ-1IX">
+                                <rect key="frame" x="20" y="393.66666666666669" width="388" height="60"/>
+                                <color key="backgroundColor" red="0.041828073559999998" green="0.81161373849999996" blue="0.80785590409999997" alpha="0.24836116462811086" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="sgX-fZ-AZH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Send to Apple Watch"/>
+                                <connections>
+                                    <action selector="sendToWatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJS-5M-Z6Q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the text you want the Apple Watch to recieve here." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJd-HY-0iL">
+                                <rect key="frame" x="20" y="333" width="388" height="40.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LJd-HY-0iL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="30p-86-DVh"/>
+                            <constraint firstItem="lmG-10-bMx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9LM-jq-SK3"/>
+                            <constraint firstItem="J6f-ES-U3W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9mU-Wg-UTs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LJd-HY-0iL" secondAttribute="trailing" constant="20" id="C7a-Rv-coN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J6f-ES-U3W" secondAttribute="trailing" constant="16" id="FRs-VM-Ksd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vu7-cQ-1IX" secondAttribute="trailing" constant="20" id="L0c-To-y4v"/>
+                            <constraint firstItem="Aqy-Tm-6vT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TCM-zx-rEd"/>
+                            <constraint firstItem="LJd-HY-0iL" firstAttribute="top" secondItem="Aqy-Tm-6vT" secondAttribute="bottom" constant="8" id="UM3-uR-rgX"/>
+                            <constraint firstItem="Aqy-Tm-6vT" firstAttribute="top" secondItem="J6f-ES-U3W" secondAttribute="bottom" constant="30" id="XYP-KD-nsB"/>
+                            <constraint firstItem="vu7-cQ-1IX" firstAttribute="top" secondItem="LJd-HY-0iL" secondAttribute="bottom" constant="20" id="Zcr-cZ-HTz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aqy-Tm-6vT" secondAttribute="trailing" constant="20" id="bCb-av-my1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lmG-10-bMx" secondAttribute="trailing" id="fnb-Nc-Hbc"/>
+                            <constraint firstItem="lmG-10-bMx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qnx-qX-C9P"/>
+                            <constraint firstItem="J6f-ES-U3W" firstAttribute="top" secondItem="lmG-10-bMx" secondAttribute="bottom" constant="16" id="u9f-aa-HxT"/>
+                            <constraint firstItem="vu7-cQ-1IX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wRu-Uq-5Id"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="→ Watch " id="O4b-bO-R5g"/>
+                    <connections>
+                        <outlet property="fieldView" destination="Aqy-Tm-6vT" id="ewA-IP-YCq"/>
+                        <outlet property="mainTextField" destination="RS4-Ih-viD" id="EGe-wk-AXe"/>
+                        <outlet property="sendToWatchButton" destination="vu7-cQ-1IX" id="IGJ-Xh-dQM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.1962616822429" y="107.55939524838014"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VDx-5c-rG8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O1N-fE-UNF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Q9g-HP-xqa">
+                        <rect key="frame" x="0.0" y="44" width="428" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nps-rH-TRN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Main Icon" width="2240" height="2902"/>
+        <namedColor name="AccentColor">
+            <color red="0.041828073559999998" green="0.81161373849999996" blue="0.80785590409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
