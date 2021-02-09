@@ -17,15 +17,21 @@ class InterfaceController: WKInterfaceController {
 //        // Configure interface objects here.
 //    }
 //
-//    override func willActivate() {
-//        // This method is called when watch view controller is about to be visible to user
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
 //        if WCSession.isSupported() {
 //            let session = WCSession.default
 //            session.delegate = self
 //            session.activate()
 //        }
-//    }
-//
+        NotificationCenter.default.addObserver(self, selector: #selector(MessageReceived), name: NSNotification.Name(rawValue: "MessageReceived"), object: nil)
+    }
+    
+    @objc func MessageReceived(_ notification: Notification) {
+        messageLabel.setText(UserDefaults.standard.string(forKey: "ScheduleDays"))
+        WKInterfaceDevice().play(.click)
+    }
+
 //    override func didDeactivate() {
 //        // This method is called when watch view controller is no longer visible
 //    }

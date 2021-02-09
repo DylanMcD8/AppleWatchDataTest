@@ -37,7 +37,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" name="AccentColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
@@ -119,7 +119,7 @@
     <resources>
         <image name="Main Icon" width="2240" height="2902"/>
         <namedColor name="AccentColor">
-            <color red="0.041828073559999998" green="0.81161373849999996" blue="0.80785590409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.041999999433755875" green="0.81199997663497925" blue="0.80800002813339233" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

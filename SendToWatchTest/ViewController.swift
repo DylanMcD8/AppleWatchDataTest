@@ -9,7 +9,7 @@ import UIKit
 import Communicator
 import SPAlert
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var mainTextField: UITextField!
     @IBOutlet weak var fieldView: UIView!
@@ -29,22 +29,29 @@ class ViewController: UIViewController {
         sendToWatchButton.layer.borderWidth = 2
         sendToWatchButton.layer.borderColor = UIColor.systemFill.cgColor
         
-
+        mainTextField.delegate = self
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        mainTextField.resignFirstResponder()
+        return true
+    }
+    
     @IBAction func sendToWatch(_ sender: Any) {
+//        let data = ["Class 1", "Class 2", "Class 3", "Class 4", "Class 5", "Class 6", "Class 7", "Class 8"]
         let content: Content = ["NewDataSync" : mainTextField.text ?? "Error"]
+//        let content: Content = ["NewDataSync" : data]
         let message = ImmediateMessage(identifier: "ScheduleClasses", content: content)
-        Communicator.shared.send(message) { result in
+        Communicator.shared.send(message) { error in
 //            switch result {
 //            case . (let error):
 //                DispatchQueue.main.async {
-                    SPAlert.present(title: "Error. See Logs.", preset: .error, haptic: .error)
+//                    SPAlert.present(title: "Error. See Logs.", preset: .error, haptic: .error)
 //                }
-//                print("Error transferring message: \(error.localizedDescription)")
+            print("Error sending immediate message", error)
 //            case .success:
 //                DispatchQueue.main.async {
-                    SPAlert.present(title: "Message Sent!", preset: .done, haptic: .success)
+            SPAlert.present(title: "Error: \(error)".replacingOccurrences(of: "sessionIsNotReachable(minimumReachability: Communicator.Reachability.immediatelyReachable, actual: Communicator.Reachability.backgroundOnly)", with: "Apple Watch Unreachable"), preset: .error, haptic: .error)
 //                }
             }
         }

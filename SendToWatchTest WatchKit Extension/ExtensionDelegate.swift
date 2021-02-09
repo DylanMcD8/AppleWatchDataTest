@@ -47,8 +47,10 @@ private extension ExtensionDelegate {
         }
         ImmediateMessage.observe { immediateMessage in
             print("Received immediate message: ", immediateMessage)
-            UserDefaults.standard.set(immediateMessage.content, forKey: "ScheduleDays")
-            print(UserDefaults.standard.object(forKey: "ScheduleDays"))
+            let content = immediateMessage.content
+            UserDefaults.standard.set(content["NewDataSync"], forKey: "ScheduleDays")
+            print(UserDefaults.standard.object(forKey: "ScheduleDays")!)
+            NotificationCenter.default.post(name: Notification.Name("MessageReceived"), object: nil)
         }
         GuaranteedMessage.observe { guaranteedMessage in
             print("Received guaranteed message: ", guaranteedMessage)
